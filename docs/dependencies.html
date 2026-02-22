@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projspec Builder — 依存ライブラリ一覧</title>
+  <style>
+    body { font-family: "Segoe UI", sans-serif; margin: 40px; color: #333; }
+    h1 { color: #7297c5; }
+    h2 { color: #666666; border-bottom: 1px solid #ccc; padding-bottom: 6px; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 32px; }
+    th { background: #7297c5; color: white; padding: 10px 14px; text-align: left; }
+    td { padding: 8px 14px; border-bottom: 1px solid #eee; }
+    tr:hover td { background: #f5f8ff; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px;
+             font-size: 0.85em; background: #e8f0fe; color: #4a6fa5; }
+  </style>
+</head>
+<body>
+  <h1>Projspec Builder — 依存ライブラリ一覧</h1>
+
+  <h2>ランタイム依存</h2>
+  <table>
+    <tr><th>ライブラリ</th><th>バージョン</th><th>説明</th></tr>
+    <tr>
+      <td>tkinter</td>
+      <td><span class="badge">標準ライブラリ (8.6)</span></td>
+      <td>Python 標準の GUI ツールキット。メインウィンドウ・ダイアログ・ウィジェットに使用。</td>
+    </tr>
+    <tr>
+      <td>pydantic</td>
+      <td><span class="badge">&gt;=2.12.5</span></td>
+      <td>データバリデーションライブラリ。フォーム入力の型検証・制約チェックに使用。</td>
+    </tr>
+    <tr>
+      <td>threading</td>
+      <td><span class="badge">標準ライブラリ</span></td>
+      <td>バックグラウンドスレッドでファイル生成を実行し、UI をブロックしないために使用。</td>
+    </tr>
+    <tr>
+      <td>pathlib</td>
+      <td><span class="badge">標準ライブラリ</span></td>
+      <td>クロスプラットフォームなファイルパス操作に使用。</td>
+    </tr>
+    <tr>
+      <td>os</td>
+      <td><span class="badge">標準ライブラリ</span></td>
+      <td>環境変数の取得・ディレクトリ存在確認に使用。</td>
+    </tr>
+    <tr>
+      <td>re</td>
+      <td><span class="badge">標準ライブラリ</span></td>
+      <td>プロジェクト名の正規表現バリデーションに使用。</td>
+    </tr>
+  </table>
+
+  <h2>開発・テスト依存</h2>
+  <table>
+    <tr><th>ライブラリ</th><th>バージョン</th><th>説明</th></tr>
+    <tr>
+      <td>pytest</td>
+      <td><span class="badge">&gt;=9.0.2</span></td>
+      <td>Python テストフレームワーク。ユニットテスト・統合テストの実行に使用。</td>
+    </tr>
+    <tr>
+      <td>pytest-cov</td>
+      <td><span class="badge">&gt;=7.0.0</span></td>
+      <td>pytest 用コードカバレッジプラグイン。HTML レポートを生成し 90% 以上を保証。</td>
+    </tr>
+    <tr>
+      <td>coverage</td>
+      <td><span class="badge">&gt;=7.13.4</span></td>
+      <td>pytest-cov のバックエンド。コードカバレッジ計測・レポート生成に使用。</td>
+    </tr>
+    <tr>
+      <td>ruff</td>
+      <td><span class="badge">&gt;=0.15.2</span></td>
+      <td>Rust 製高速 Python リンター・フォーマッター。静的コード解析に使用。</td>
+    </tr>
+    <tr>
+      <td>unittest.mock</td>
+      <td><span class="badge">標準ライブラリ</span></td>
+      <td>外部依存（ファイルシステム・環境変数・TKinter ダイアログ）のモック化に使用。</td>
+    </tr>
+  </table>
+
+  <h2>Python バージョン</h2>
+  <table>
+    <tr><th>項目</th><th>値</th></tr>
+    <tr><td>最低要求バージョン</td><td>Python 3.13+</td></tr>
+    <tr><td>動作確認バージョン</td><td>Python 3.13.12</td></tr>
+    <tr><td>TKinter バージョン</td><td>8.6</td></tr>
+  </table>
+</body>
+</html>
